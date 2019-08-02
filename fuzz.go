@@ -446,10 +446,7 @@ var fillFuncMap = map[reflect.Kind]func(reflect.Value, *rand.Rand){
 
 // randBool returns true or false randomly.
 func randBool(r *rand.Rand) bool {
-	if r.Int()&1 == 1 {
-		return true
-	}
-	return false
+	return r.Int()&1 == 1
 }
 
 type charRange struct {
